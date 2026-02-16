@@ -1,0 +1,16 @@
+{
+  "name": "rms-monorepo",
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @rms/web",
+    "build": "npm run build -w @rms/web",
+    "start": "npm run start -w @rms/web",
+    "lint": "npm run lint -w @rms/web",
+    "typecheck": "npm run typecheck -w @rms/web && npm run typecheck -w @rms/shared"
+  }
+}
